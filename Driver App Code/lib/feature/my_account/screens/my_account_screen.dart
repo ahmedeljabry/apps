@@ -292,12 +292,13 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                                                         Get.find<
                                                           SplashController
                                                         >();
+                                                    // Cash Collect is an offline
+                                                    // settlement method. It must
+                                                    // remain available when the
+                                                    // admin disables online
+                                                    // gateways (digital_payment).
                                                     if (!splashController
-                                                            .hasPaymentMethods ||
-                                                        splashController
-                                                                .configModel
-                                                                ?.digitalPayment !=
-                                                            true) {
+                                                        .hasPaymentMethods) {
                                                       showCustomSnackBar(
                                                         'currently_there_are_no_payment_options_available_please_contact_admin_regarding_any_payment_process_or_queries'
                                                             .tr,
