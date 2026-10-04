@@ -1,0 +1,151 @@
+class EarningReportModel {
+  final Summary? summary;
+  final Trends? trends;
+  final Transactions? transactions;
+
+  EarningReportModel({this.summary, this.trends, this.transactions});
+
+  factory EarningReportModel.fromJson(Map<String, dynamic> json) {
+    return EarningReportModel(
+      summary: json['summary'] != null ? Summary.fromJson(json['summary']) : null,
+      trends: json['trends'] != null ? Trends.fromJson(json['trends']) : null,
+      transactions: json['transactions'] != null ? Transactions.fromJson(json['transactions']) : null,
+    );
+  }
+}
+
+// ── Summary ───────────────────────────────────────────────
+class Summary {
+  final double? totalEarnings;
+  final double? totalEarningsPercentage;
+  final bool? totalEarningsPositive;
+  final double? totalExpenses;
+  final double? totalExpensesPercentage;
+  final bool? totalExpensesPositive;
+  final double? netProfit;
+  final double? netProfitPercentage;
+  final bool? netProfitPositive;
+  final Breakdown? breakdown;
+
+  Summary({
+    this.totalEarnings,
+    this.totalEarningsPercentage,
+    this.totalEarningsPositive,
+    this.totalExpenses,
+    this.totalExpensesPercentage,
+    this.totalExpensesPositive,
+    this.netProfit,
+    this.netProfitPercentage,
+    this.netProfitPositive,
+    this.breakdown,
+  });
+
+  factory Summary.fromJson(Map<String, dynamic> json) {
+    return Summary(
+      totalEarnings: (json['total_earnings'] as num?)?.toDouble(),
+      totalEarningsPercentage: (json['total_earnings_percentage'] as num?)?.toDouble(),
+      totalEarningsPositive: json['total_earnings_positive'] as bool?,
+      totalExpenses: (json['total_expenses'] as num?)?.toDouble(),
+      totalExpensesPercentage: (json['total_expenses_percentage'] as num?)?.toDouble(),
+      totalExpensesPositive: json['total_expenses_positive'] as bool?,
+      netProfit: (json['net_profit'] as num?)?.toDouble(),
+      netProfitPercentage: (json['net_profit_percentage'] as num?)?.toDouble(),
+      netProfitPositive: json['net_profit_positive'] as bool?,
+      breakdown: json['breakdown'] != null ? Breakdown.fromJson(json['breakdown']) : null,
+    );
+  }
+}
+
+// ── Breakdown ─────────────────────────────────────────────
+class Breakdown {
+  final double? deliveryCharge;
+  final double? dmTips;
+  final String? incentives;
+  final double? adminCommission;
+
+  Breakdown({this.deliveryCharge, this.dmTips, this.incentives, this.adminCommission});
+
+  factory Breakdown.fromJson(Map<String, dynamic> json) {
+    return Breakdown(
+      deliveryCharge: (json['delivery_charge'] as num?)?.toDouble(),
+      dmTips: (json['dm_tips'] as num?)?.toDouble(),
+      incentives: (json['incentives']),
+      adminCommission: (json['admin_commission'] as num?)?.toDouble(),
+    );
+  }
+}
+
+// ── Trends ────────────────────────────────────────────────
+class Trends {
+  final List<String>? categories;
+  final List<double>? earningSeries;
+  final List<double>? expenseSeries;
+
+  Trends({this.categories, this.earningSeries, this.expenseSeries});
+
+  factory Trends.fromJson(Map<String, dynamic> json) {
+    return Trends(
+      categories: (json['categories'] as List?)?.map((e) => e.toString()).toList(),
+      earningSeries: (json['earning_series'] as List?)?.map((e) => (e as num).toDouble()).toList(),
+      expenseSeries: (json['expense_series'] as List?)?.map((e) => (e as num).toDouble()).toList(),
+    );
+  }
+}
+
+// ── Transactions ──────────────────────────────────────────
+class Transactions {
+  final int? totalSize;
+  final int? limit;
+  final int? offset;
+  final List<TransactionData>? data;
+
+  Transactions({this.totalSize, this.limit, this.offset, this.data});
+
+  factory Transactions.fromJson(Map<String, dynamic> json) {
+    return Transactions(
+      totalSize: json['total_size'] as int?,
+      limit: json['limit'] as int?,
+      offset: json['offset'] as int?,
+      data: (json['data'] as List?)?.map((e) => TransactionData.fromJson(e)).toList(),
+    );
+  }
+}
+
+// ── TransactionData ───────────────────────────────────────
+class TransactionData {
+  final String? orderId;
+  final String? date;
+  final double? deliveryCharge;
+  final double? incentive;
+  final double? tips;
+  final double? commissionPaid;
+  final double? netProfit;
+  final String? transactionId;
+  final String? transactionDate;
+
+  TransactionData({
+    this.orderId,
+    this.date,
+    this.deliveryCharge,
+    this.incentive,
+    this.tips,
+    this.commissionPaid,
+    this.netProfit,
+    this.transactionId,
+    this.transactionDate,
+  });
+
+  factory TransactionData.fromJson(Map<String, dynamic> json) {
+    return TransactionData(
+      orderId: json['order_id']?.toString(),
+      date: json['date']?.toString(),
+      transactionId: json['transaction_id']?.toString(),
+      transactionDate: json['transaction_date']?.toString(),
+      deliveryCharge: (json['delivery_charge'] as num?)?.toDouble(),
+      incentive: (json['incentive'] as num?)?.toDouble(),
+      tips: (json['tips'] as num?)?.toDouble(),
+      commissionPaid: (json['commission_paid'] as num?)?.toDouble(),
+      netProfit: (json['net_profit'] as num?)?.toDouble(),
+    );
+  }
+}

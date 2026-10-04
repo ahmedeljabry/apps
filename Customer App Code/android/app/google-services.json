@@ -1,0 +1,25 @@
+{
+  "project_info": {
+    "project_number": "556869478931",
+    "project_id": "dzairfood-5954e",
+    "storage_bucket": "dzairfood-5954e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556869478931:android:3486e0842336625e5d6de6",
+        "android_client_info": {
+          "package_name": "com.dzairfood.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtU-mvPZgvluhWoo3vpPiDhznBrwQ7fhY"
+        }
+      ],
+      "services": {}
+    }
+  ],
+  "configuration_version": "1"
+}

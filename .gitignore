@@ -1,0 +1,50 @@
+# Flutter/Dart generated output
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/android/.gradle/
+**/android/app/.cxx/
+
+# Signing credentials and local secrets
+**/android/key.properties
+**/*.jks
+**/*.keystore
+**/.env
+**/.env.*
+
+# Archives and generated deliverables
+*.apk
+*.aab
+*.ipa
+*.rar
+*.zip
+*.app.dSYM/
+*.symbols
+*.map.json
+
+# Local/editor files
+.DS_Store
+.idea/
+**/.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+**/.vscode/
+*.log
+*.swp
+
+# Local screenshots and temporary files at repository root
+/*-ios-*.png
+/*-test.png
+/customer-ios-*.png
+/driver-ios-*.png
+/tmp/
+/temp/

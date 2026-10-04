@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "296698366161",
+    "project_id": "dzairfood2",
+    "storage_bucket": "dzairfood2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296698366161:android:73bb3c89ebe64d1277ddf0",
+        "android_client_info": {
+          "package_name": "com.dzairfood.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296698366161-lhkihl4r9c9tt3aq6rkh34h7mt3aecq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dzairfood.app",
+            "certificate_hash": "dceb55cdf67d895ecf8af405fbb0569f24fa751e"
+          }
+        },
+        {
+          "client_id": "296698366161-tunp7o3k1830kjpl7ujvadnb0i9nd7p8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dzairfood.app",
+            "certificate_hash": "0d700cf27e1664108b1fae6f9732daf45f2a8559"
+          }
+        },
+        {
+          "client_id": "296698366161-vc2luoc4i2hp013q671n3hkqk0ckin8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvDQr7h6CiNFQ3WYjtJF02-4yJn3maQHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296698366161-eleonlmdfncms0ct2c31qb4fc5hh5n44.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "296698366161-07n8o31s364ngkbg92n43bgsmcq1p3io.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dzairfood.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296698366161:android:fa2e25fc40b5315877ddf0",
+        "android_client_info": {
+          "package_name": "com.dzairfood.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296698366161-vc2luoc4i2hp013q671n3hkqk0ckin8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvDQr7h6CiNFQ3WYjtJF02-4yJn3maQHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296698366161-eleonlmdfncms0ct2c31qb4fc5hh5n44.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "296698366161-07n8o31s364ngkbg92n43bgsmcq1p3io.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dzairfood.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
