@@ -114,13 +114,14 @@ class CashInHandBottomSheet extends StatelessWidget {
                   const SizedBox(height: Dimensions.paddingSizeOverLarge),
 
                   CustomButtonWidget(
-                    buttonText:
+                      buttonText:
                         '${'pay_now'.tr} (${PriceConverter.convertPrice(profileController.profileModel?.payableBalance ?? 0)})',
-                    onPressed: () {
-                      final splashController = Get.find<SplashController>();
-                      if (!splashController.hasPaymentMethods ||
-                          splashController.configModel?.digitalPayment !=
-                              true) {
+                      onPressed: () {
+                        final splashController = Get.find<SplashController>();
+                        // Cash Collect is an offline payment method and must
+                        // remain available even when online gateways are
+                        // disabled in the admin panel.
+                        if (!splashController.hasPaymentMethods) {
                         showCustomSnackBar(
                           'currently_there_are_no_payment_options_available_please_contact_admin_regarding_any_payment_process_or_queries'
                               .tr,
